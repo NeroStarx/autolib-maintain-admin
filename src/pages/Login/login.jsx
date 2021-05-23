@@ -1,9 +1,9 @@
 import React from 'react'
 import './login.css'
-import Form from '../form/loginform'
-import Button from '../button/button'
+import Form from '../../components/form/loginform'
+import Button from '../../components/button/button'
 
-export default function header(){
+export default function login(props){
     return(
         <div className="main-header-container">
             <div className="description">
@@ -14,7 +14,7 @@ export default function header(){
                 <Button text="Savoir plus" mode="dark_mode"/>
             </div>
             <div >
-                <Form />
+                <Form onClick={props.onClick}/>
             </div>
         </div>
     )

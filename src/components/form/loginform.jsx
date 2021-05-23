@@ -16,7 +16,7 @@ export default function form(props){
             <input type="password" name="password_input" 
                 id="name-input" placeholder="Mot de pass" className="form-input"/>
                 <br /><br /><br />
-            <Button text="Se connecter" mode="light_mode"/>
+            <Button text="Se connecter" mode="light_mode" onClick={props.onClick}/>
             <br /><br />
         </div>
     )
