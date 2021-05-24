@@ -29,14 +29,14 @@ export default class main extends React.Component {
         return (
             <Router>
                 {/*use the authentification to get to the route*/}
-                {this.state.isAuthenticated ? <Redirect from="/" to="/maintain/dashboard" /> :
-                    <Redirect from="/" to="/login" /> }
+                {this.state.isAuthenticated ? <Redirect to="/maintain/dashboard" /> :
+                    <Redirect to="/login" /> }
                 <Switch>
                     <Route path="/login">
                         <Login onClick={() => this.performLogin()}/>
                     </Route>
                     <Route path="/maintain/dashboard">
-                        <Dashboard />
+                        <Dashboard state={this.state}/>
                     </Route>
                 </Switch>
             </Router>
