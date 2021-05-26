@@ -21,15 +21,14 @@
 }
 
 .header-title{
+    width: 50%;
     font-family: 'Montserrat';
     font-size: 0.9em;
     color: #CCC;
     margin: 1px;
 }
 
-.header-title:first-child{
-    width: 36%;
-}
+
 
 .agent-search{
     width: 33%;
