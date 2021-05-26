@@ -1,0 +1,24 @@
+.vehicule-list-container{
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.vehicule-header-container{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2%;
+    width: 98%;
+}
+
+.vehicule-header-title{
+    min-width: max-content;
+    font-family: 'Montserrat';
+    font-size: 0.9em;
+    color: #CCC;
+    margin: 1px;
+    margin-top: 15px;
+    margin-right: 20%;
+}
