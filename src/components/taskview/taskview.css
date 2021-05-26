@@ -1,0 +1,61 @@
+.task-view-container{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid #DDD;
+}
+
+.task-bubble{
+    height: 30px;
+    width: 30px;
+    background-color: rgb(247, 83, 83);
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.task-state{
+    width: 50px;
+    font-family: 'Montserrat';
+    font-size: 0.8em;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: white;
+    border-radius: 1000px;
+}
+
+.affected{
+    background-color: rgb(51, 196, 51);
+    transition: 200ms ease-in-out;
+}
+
+.affected:hover{
+    background-color: rgb(93, 231, 93);
+}
+
+.non-affected{
+    background-color: rgb(247, 83, 83);
+    transition: 200ms ease-in-out;
+}
+
+.non-affected:hover{
+    background-color: rgb(250, 126, 126);
+}
+
+.task-title{
+    font-family: "Montserrat";
+    font-size: 0.9em;
+    margin: 2px;
+    width: 40%;
+}
+
+.task-subtitle{
+    font-family: 'Montserrat';
+    font-size: 0.6em;
+    color: #CCC;
+    margin: 2px;
+    width: 40%;
+}
