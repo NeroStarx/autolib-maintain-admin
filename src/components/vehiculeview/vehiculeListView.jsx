@@ -2,7 +2,7 @@ import React from 'react'
 import './vehiculView.css'
 import image from '../../assets/car_model.png'
 
-export default function AgentView(props){
+export default function VehiculeListView(props){
     return(
         <div className="vehicule-view-container">
             <img src={image} alt="vehicule" className="vehicule-image"/>
