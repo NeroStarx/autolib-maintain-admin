@@ -8,6 +8,7 @@ import SideBar from '../../components/sidebar/sidebar'
 import AgentView from '../agents/agents'
 import TaskView from '../tasks/tasks'
 import VehiculeView from '../vehicules/vehicules'
+import TopBar from '../../components/topbar/topbar'
 
 import TaskIcon from '../../assets/task.svg'
 import AgentIcon from '../../assets/agent.svg'
@@ -22,25 +23,19 @@ export default function MaintaintDashboard(props){
           path: url + "/agents",
           name: "Agents",
           icon: AgentIcon,
-          view: () => <div className="dashboard-view">
-                          <AgentView />
-                      </div>
+          view: () => getDashboardView("agent")
         },
         {
           path: url + "/tasks",
           name: "Taches",
           icon: TaskIcon,
-          view: () => <div className="dashboard-view">
-                          <TaskView />
-                      </div>
+          view: () => getDashboardView("task")
         },
         {
           path: url + "/vehicules",
           name: "Véhicules",
           icon: CarIcon,
-          view: () => <div className="dashboard-view">
-                          <VehiculeView />
-                      </div>
+          view: () => getDashboardView("Vehicules")
         }
       ];
 
@@ -60,4 +55,37 @@ export default function MaintaintDashboard(props){
             </Switch>
         </div>
     )
+}
+
+function getDashboardView(mode){
+        switch(mode){
+            case "agent": {
+                return(
+                    <div className="dashboard-view">
+                        <TopBar viewTitle="Agents" profileName="aaron nerostarx"/>
+                        <div className="view">
+                            <AgentView />
+                        </div>
+                    </div>)
+            }
+            case "task":{
+                return(
+                    <div className="dashboard-view">
+                        <TopBar viewTitle="Taches" profileName="aaron nerostarx"/>
+                        <div className="view">
+                            <TaskView />
+                        </div>
+                    </div>)
+            }
+            default : {
+                return(
+                    <div className="dashboard-view">
+                        <TopBar viewTitle="Véhicules" profileName="aaron nerostarx"/>
+                        <div className="view">
+                            <VehiculeView />
+                        </div>
+                    </div>)
+            }
+        }
+        
 }
