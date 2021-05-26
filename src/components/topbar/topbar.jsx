@@ -1,4 +1,6 @@
 import React from 'react'
+import {
+    NavLink} from 'react-router-dom'
 
 import profilePic from '../../assets/profile_pic.png'
 import notificationIcon from '../../assets/notification_icon.png'
@@ -9,7 +11,11 @@ export default function topBar(props){
         <div className="wrapper">
             <div className="topbar-container">
                 <p className="view-name">{props.viewTitle}</p>
-                <img src={notificationIcon} alt="notifications" className="notification-icon"/>
+                <NavLink to={props.route.path}>
+                    <img src={notificationIcon} 
+                            alt="notifications" 
+                            className="notification-icon"/>
+                </NavLink>
                 <p className="profile-name">{props.profileName}</p>
                 <img src={profilePic} alt="profile" className="topbar-picture" />
             </div>
