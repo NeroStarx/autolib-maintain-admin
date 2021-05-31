@@ -1,61 +1,116 @@
-.task-view-container{
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    border-top: 1px solid #DDD;
+.task-view-container {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  transition: 200ms ease-in-out;
 }
 
-.task-bubble{
-    height: 30px;
-    width: 30px;
-    background-color: rgb(247, 83, 83);
-    border-radius: 50%;
-    margin: 20px;
+.task-view-container:hover {
+  background-color: #f7f8ff;
 }
 
-.task-state{
-    width: 50px;
-    font-family: 'Montserrat';
-    font-size: 0.8em;
-    text-align: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    color: white;
-    border-radius: 1000px;
+.task-bubble {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(247, 83, 83);
+  border-radius: 50%;
+  margin: 20px;
 }
 
-.affected{
-    background-color: rgb(51, 196, 51);
-    transition: 200ms ease-in-out;
+.task-state {
+  width: 60px;
+  font-family: "Montserrat";
+  font-size: 0.8em;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: white;
+  border-radius: 1000px;
 }
 
-.affected:hover{
-    background-color: rgb(93, 231, 93);
+.ended {
+  background-color: rgb(51, 196, 51);
+  transition: 200ms ease-in-out;
 }
 
-.non-affected{
-    background-color: rgb(247, 83, 83);
-    transition: 200ms ease-in-out;
+.ended:hover {
+  background-color: rgb(93, 231, 93);
 }
 
-.non-affected:hover{
-    background-color: rgb(250, 126, 126);
+.affected {
+  background-color: rgb(247, 83, 83);
+  transition: 200ms ease-in-out;
 }
 
-.task-title{
-    font-family: "Montserrat";
-    font-size: 0.9em;
-    margin: 2px;
-    width: 40%;
+.affected:hover {
+  background-color: rgb(250, 126, 126);
 }
 
-.task-subtitle{
-    font-family: 'Montserrat';
-    font-size: 0.6em;
-    color: #CCC;
-    margin: 2px;
-    width: 40%;
+.progress {
+  background-color: rgb(247, 181, 83);
+  transition: 200ms ease-in-out;
+}
+
+.progress:hover {
+  background-color: rgb(240, 164, 50);
+}
+
+.task-title {
+  font-family: "Montserrat";
+  font-size: 0.9em;
+  margin: 2px;
+  width: 40%;
+}
+
+.task-subtitle {
+  font-family: "Montserrat";
+  font-size: 0.6em;
+  color: #ccc;
+  margin: 2px;
+  width: 40%;
+}
+
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+
+.task-modal{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.task-modal-title{
+  font-family: "Montserrat";
+  font-size: 1.2em;
+  font-weight: bolder;
+  margin: 2px;
+}
+
+.task-modal-subtitle{
+  font-family: "Montserrat";
+  font-size: 1em;
+  margin: 2px;
+}
+
+.task-modal-text{
+  font-family: "Montserrat";
+  font-size: 0.9em;
+  margin: 2px;
+  color: #ccc;
 }

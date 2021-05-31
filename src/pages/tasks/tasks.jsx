@@ -6,12 +6,14 @@ import "./tasks.css";
 
 const Tasks = (props) => {
   const [tasks, setTasks] = useState([]);
+
   useEffect(async () => {
     const result = await axios("https://service-tasks.herokuapp.com/task");
     setTasks(result);
     return result;
   }, []);
   console.log(tasks);
+
   return (
     tasks && (
       <div className="tasks-container">
