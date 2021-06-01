@@ -25,6 +25,10 @@ export default class main extends React.Component {
         )
     }
 
+    performLogout(){
+        alert ('fzefefeqed')
+    }
+
     authenticate(){
         return (
             <Router>
@@ -36,7 +40,7 @@ export default class main extends React.Component {
                         <Login onClick={() => this.performLogin()}/>
                     </Route>
                     <Route path="/maintain/dashboard">
-                        <Dashboard state={this.state}/>
+                        <Dashboard state={this.state} onClick={()=>this.performLogout}/>
                     </Route>
                 </Switch>
             </Router>

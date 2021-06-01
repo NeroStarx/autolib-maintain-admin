@@ -18,7 +18,6 @@ export default function taskView(props) {
       <Modal
         isOpen={isModalOpen}
         contentLabel="Task details"
-        onRequestClose={closeModal}
         closeTimeoutMS={150}
         style={{
           overlay: {

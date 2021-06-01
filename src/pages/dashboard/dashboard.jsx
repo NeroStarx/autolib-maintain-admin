@@ -22,32 +22,32 @@ export default function MaintaintDashboard(props){
     const notificationRoute = {
         path: url + "/notifications",
         name: "Notifications",
-        view: () => getDashboardView("notification", notificationRoute)
+        view: () => getDashboardView("notification", notificationRoute,props.onClick)
     }
     const routes = [
         {
           path: url + "/agents",
           name: "Agents",
           icon: AgentIcon,
-          view: () => getDashboardView("agent",notificationRoute)
+          view: () => getDashboardView("agent",notificationRoute,props)
         },
         {
           path: url + "/tasks",
           name: "Taches",
           icon: TaskIcon,
-          view: () => getDashboardView("task",notificationRoute)
+          view: () => getDashboardView("task",notificationRoute,props)
         },
         {
           path: url + "/vehicules",
           name: "Véhicules",
           icon: CarIcon,
-          view: () => getDashboardView("Vehicules",notificationRoute)
+          view: () => getDashboardView("Vehicules",notificationRoute,props)
         },
         {
           path: url + "/notifications",
           name: "Notifications",
           icon: 'icon',
-          view: () => getDashboardView("notification", notificationRoute)
+          view: () => getDashboardView("notification", notificationRoute,props)
         }
       ];
 
@@ -69,13 +69,14 @@ export default function MaintaintDashboard(props){
     )
 }
 
-function getDashboardView(mode,route){
+function getDashboardView(mode,route,props){
         switch(mode){
             case "agent": {
                 return(
                     <div className="dashboard-view">
                         <TopBar viewTitle="Agents" 
                                 profileName="aaron nerostarx"
+                                onDisconnect={()=>{props.onClick()}}
                                 route={route}/>
                         <div className="view">
                             <AgentView />
@@ -87,6 +88,7 @@ function getDashboardView(mode,route){
                     <div className="dashboard-view">
                         <TopBar viewTitle="Taches" 
                                 profileName="aaron nerostarx"
+                                onDisconnect={()=>props.onClick}
                                 route={route}/>
                         <div className="view">
                             <TaskView />
@@ -98,6 +100,7 @@ function getDashboardView(mode,route){
                     <div className="dashboard-view">
                         <TopBar viewTitle="Notifications" 
                                 profileName="aaron nerostarx" 
+                                onDisconnect={()=>props.onClick}
                                 route={route}/>
                         <div className="view">
                             <NotificationView />
@@ -109,6 +112,7 @@ function getDashboardView(mode,route){
                     <div className="dashboard-view">
                         <TopBar viewTitle="Véhicules" 
                                 profileName="aaron nerostarx" 
+                                onDisconnect={()=>props.onClick}
                                 route={route}/>
                         <div className="view">
                             <VehiculeView />

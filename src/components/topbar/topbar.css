@@ -48,3 +48,22 @@
     position: absolute;
     left: 22%;
 }
+
+.Modal{
+    position: absolute;
+    right: 23px;
+    top: 65px;
+    width: 150px;
+    outline: none;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #CCC;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 0.9em;
+}
+
+.Overlay{
+    background-color: transparent;
+}
