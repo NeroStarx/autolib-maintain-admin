@@ -3,12 +3,13 @@ import './agentview.css'
 import image from '../../assets/profile_pic.png'
 
 export default function AgentView(props){
+    console.log(props.agent)
     return(
         <div className="agent-view-container">
             <div className="agent-info">
                 <img src={image} alt="agent" className="agent-image"/>
                 <div className="agent-divider">
-                    <p className="agent-title">Agent name</p>
+                    <p className="agent-title">{props.agent.name + ' ' + props.agent.surename}</p>
                     <p className="agent-subtitle">updated 10mins ago</p>
                 </div>
             </div>
